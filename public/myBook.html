@@ -1,0 +1,16 @@
+<my-navbar></my-navbar>
+
+<div class="container">
+    <my-trade></my-trade>
+    <h2>My Books:</h2>
+    <hr/>
+    <input type="text" placeholder="Add Book" ng-model="inputBook"><span><button class="btn btn-primary" ng-click="addBook()" ng-disabled="btnDisable">Add</button></span>
+    <div class="bookShelf">
+        <span ng-repeat="book in myBooks">
+            <img src={{book.cover}} class="img-rounded" alt="book cover" width="154" height="186"><button class="deletebtn" ng-click="deleteBook(book)"><span>&times</span></button>
+        </span>
+    </div>
+    <div ng-show="showErr">
+        <p>{{errInfo}}</p>
+    </div>
+</div>

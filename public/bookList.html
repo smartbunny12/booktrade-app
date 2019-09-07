@@ -1,0 +1,13 @@
+<my-navbar></my-navbar>
+
+<div class="container">
+    <my-trade></my-trade>
+    <h2>All Books:</h2>
+    <p>click <i class="fa fa-retweet"></i> to trade the book</p>
+    <hr/>
+    <div class="bookShelf">
+        <span ng-repeat="book in myBooks1">
+            <img src={{book.cover}} class="img-rounded" alt="book cover" width="154" height="186"><button ng-hide="book.ishide" class="deletebtn" ng-click="sendReq(book)"><i class="fa fa-retweet"></i></button>
+        </span>
+    </div>    
+</div>

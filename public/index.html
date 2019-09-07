@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>bookjump</title>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">        
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>   
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-resource.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-cookies.js"></script>
+        <script src="https://angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>  
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.js"></script>
+        <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.3.3.js"></script>        
+        <link href="/node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    </head>
+    
+    <body ng-app="mainApp" data-target=".navbar">
+        <ui-view></ui-view>
+        <my-footer></my-footer>
+        
+        <link rel="stylesheet" href="/public/css/main.css" type="text/css">
+        <script src="/client/app.js"></script>
+        <script src="/client/directives/navbar.js"></script>
+        <script src="/client/directives/mytrade.js"></script>
+        <script src="/client/services/user.service.js"></script>
+        <script src="/client/services/book.service.js"></script>
+        <script src="/client/services/request.service.js"></script>
+        <script src="/client/services/auth.service.js"></script>
+        <script src="/controllers/ui.router.js"></script>
+        <script src="/controllers/state.controller.js"></script>
+    </body>

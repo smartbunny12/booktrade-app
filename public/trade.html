@@ -1,0 +1,19 @@
+<div>
+  <uib-accordion close-others="oneAtATime">
+    <uib-accordion-group heading="Your trade requests ({{tradeBooks.length}} outstanding)">
+        <span class="infoBoard" ng-repeat="book in tradeBooks">
+            <img src={{book.cover}} class="img-rounded" alt="book cover" width="154" height="186"><button class="deletebtn" ng-click="acceptTradeBook(book, $index)"><i class="fa fa-check-square"></i></button>
+              <span class="requesterInfo">
+                <p>requester : {{book.requester.email}}</p>
+                <p>State : {{book.requester.state}}</p>
+                <p>City : {{book.requester.city}}</p>
+              </span>            
+        </span>
+    </uib-accordion-group>
+    <uib-accordion-group heading="Your requests for you ({{reqBooks.length}} unapproved)">
+          <span ng-repeat="book in reqBooks">
+              <img src={{book.cover}} class="img-rounded" alt="book cover" width="154" height="186"><button class="deletebtn" ng-click="removeReqBook(book.reqID)">&times</button>
+          </span>
+    </uib-accordion-group>    
+  </uib-accordion>
+</div>

@@ -1,0 +1,17 @@
+.jumbotron {
+    text-align : center !important;
+    background-color : #57A0E1;
+    color : #E8E7E6;
+}
+
+
+.deletebtn {
+    position : relative !important;
+    top : -75px !important;
+    left : -30px;
+}
+
+.infoBoard {
+    float : left;
+    margin-left : 10px;
+}

@@ -1,0 +1,28 @@
+<my-navbar></my-navbar>
+
+<div class="container">
+    <h1>Sign up</h1>
+    <form role="form">
+        <div class="form-group">
+            <label for="myEmail">Email:</label>
+            <input id="myEmail" class="form-control" type="email" ng-model="myEmail" placeholder="Please input a valid email address">
+        </div>
+        <div class="form-group">
+            <label for="myPwd">Password:</label>
+            <input id="myPwd" class="form-control" type="password" ng-model="myPwd" placeholder="Please input at least 6 chars or digtis password">
+        </div>    
+        <div class="form-group">
+            <label for="myState">State:</label>
+            <input id="myState" class="form-control" type="text" ng-model="myState">
+        </div>          
+        <div class="form-group">
+            <label for="myCity">City:</label>
+            <input id="myCity" class="form-control" type="text" ng-model="myCity">
+        </div>  
+        
+        <button class="btn btn-primary btn-lg" ng-click="signup()">Sign Up</button>
+    </form>
+    <div ng-show="showErr">
+        <p>{{errInfo}}</p>
+    </div>
+</div>

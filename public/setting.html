@@ -1,0 +1,23 @@
+<my-navbar></my-navbar>
+
+<div class="container">
+    <h2>Update Profile:</h2>
+    <hr/>
+    
+    <form>
+        <div class="form-group">
+            <label for="myState">State:</label>
+            <input id="myState" class="form-control" type="text" ng-model="myState">
+        </div>          
+        <div class="form-group">
+            <label for="myCity">City:</label>
+            <input id="myCity" class="form-control" type="text" ng-model="myCity">
+        </div>  
+        
+        <button class="btn btn-primary btn-lg" ng-click="updateUser()">Save Changes</button>
+    </form>      
+    
+    <div ng-show="showErr">
+        <p>{{errInfo}}</p>
+    </div>
+</div>

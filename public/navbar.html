@@ -1,0 +1,28 @@
+<div>
+    <nav class="navbar navbar-inverse">
+        <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" ui-sref="home" target="_self">BookJump</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li ng-class='{active : isActive("home")}'><a ui-sref="home" target="_self">Home</a></li>
+                <li ng-class='{active : isActive("signup")}' ng-show="!isAuthenticated"><a ui-sref="signup">Sign Up</a></li>
+                <li ng-class='{active : isActive("login")}' ng-show="!isAuthenticated"><a ui-sref="login">Log In</a></li>
+                <li ng-class='{active : isActive("bookList")}' ng-show="isAuthenticated"><a ui-sref="bookList">All Books</a></li>
+                <li ng-class='{active : isActive("myBook")}' ng-show="isAuthenticated"><a ui-sref="myBook">My Books</a></li>
+                <li ng-class='{active : isActive("setting")}' ng-show="isAuthenticated"><a ui-sref="setting">Setting</a></li>
+                <li ng-if="isAuthenticated" class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown">{{currentUser.email}}<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a ng-click="logout()">Log Out</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
